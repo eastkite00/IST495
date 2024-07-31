@@ -10,15 +10,14 @@ By analyzing sentiment scores derived from financial news, this project seeks to
 1. [Installation]
 2. [Usage]
 3. [Contributing]
-4. [License]
-5. [Contact Information)
+4. [Contact Information)
 
 ## Installation
-1. Install the required libraries
+1. Install the required libraries (refer to Financial_News_Sentiment_Analysis.md)
 
 ## Usage
 
-Follow these steps to use the project and please refer to Financial_News_Sentiment_Analysis.md for detailed codes.
+Follow these steps to use the project (refer to Financial_News_Sentiment_Analysis.md for detailed codes)
 
 1. **Data Collection**
 
