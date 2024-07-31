@@ -87,13 +87,12 @@ def fetch_article_content(url):
                 main_content = soup.get_text(separator=' ')
             # Preprocess content
             processed_content = preprocess_text(main_content)
-
             return processed_content
         else:
             print(f"Unsupported content type for URL: {url}")
             return None
-
-    except requests.exceptions.HTTPError as http_err:
+            
+except requests.exceptions.HTTPError as http_err:
         return None
     except requests.exceptions.RequestException as req_err:
         return None
@@ -167,10 +166,8 @@ def compute_sentiment_score_finroberta(text, tokenizer, model):
 # Read tickers and percentage changes from CSV file
 def get_all_tickers_and_changes(csv_filename):
     df = pd.read_csv(csv_filename)
-
     # Select all tickers and their percentage changes
     tickers_and_changes = df[['Ticker', 'Change']].copy()
-
     return tickers_and_changes
 
 # Function to fetch stock data from the given API URL with retry logic
@@ -195,7 +192,6 @@ def fetch_stock_data(api_url, max_retries=5, backoff_factor=1):
 def main():
     # API URL with specific filters and API token
     api_url = "https://elite.finviz.com/export.ashx?v=151&p=i1&f=cap_0.01to,geo_usa|china|france|europe|australia|belgium|canada|chinahongkong|germany|hongkong|iceland|japan|newzealand|ireland|netherlands|norway|singapore|southkorea|sweden|taiwan|unitedarabemirates|unitedkingdom|switzerland|spain,sh_curvol_o100,sh_relvol_o2&ft=4&o=-change&ar=10&auth=28943bdd-1830-4a3d-a176-1293e3bc2f4e"
-
     try:
         # Fetch stock data with retry logic
         data = fetch_stock_data(api_url)
@@ -225,10 +221,8 @@ def main():
             news_df['SS_Finvader'] = news_df['Processed_Content'].apply(compute_sentiment_score_finvader)
             news_df['SS_NLTK'] = news_df['Processed_Content'].apply(compute_sentiment_score_nltk)
             news_df['SS_FinRoberta'] = news_df['Processed_Content'].apply(lambda x: compute_sentiment_score_finroberta(x, tokenizer, model))
-
             # Map percentage changes to news_df
             news_df = news_df.merge(tickers_and_changes, left_on='Ticker', right_on='Ticker', how='left')
-
             # Output CSV file
             csv_filename = f'news_{start_date.strftime("%Y-%m-%d")}_to_{end_date.strftime("%Y-%m-%d")}.csv'
             news_df.to_csv(csv_filename, index=False, columns=['Date', 'Ticker', 'Title', 'Link', 'Processed_Content', 'SS_Finvader', 'SS_NLTK', 'SS_FinRoberta', 'Change'])
