@@ -30,6 +30,9 @@ Follow these steps to use the project and please refer to Financial_News_Sentime
 
 6. **Evaluation Metrics**
 
+## Example
+finviz.csv and news_2024-07-27_to_2024-07-28.numbers are example output files used in Financial_News_Sentiment_Analysis.md for model evaluation
+
 
 ## Contributing
 
