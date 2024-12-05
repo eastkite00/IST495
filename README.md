@@ -9,11 +9,12 @@ By analyzing sentiment scores derived from financial news, this project seeks to
 
 1. [Installation]
 2. [Usage]
-3. [Contributing]
-4. [Contact Information)
+3. [Example]
+4. [Acknowledgments]
+5. [Contact Information]
 
 ## Installation
-1. Install the required libraries (refer to Financial_News_Sentiment_Analysis.md)
+Install the required libraries (refer to Financial_News_Sentiment_Analysis.md)
 
 ## Usage
 
@@ -31,6 +32,10 @@ Follow these steps to use the project (refer to Financial_News_Sentiment_Analysi
 
 ## Example
 finviz.csv and news_2024-07-27_to_2024-07-28.numbers are example output files used in Financial_News_Sentiment_Analysis.md for model evaluation
+
+## Acknowledgments
+Dr. Kaamran Raahemifar 
+kraahemi@psu.edu
 
 ## Contact Information
 
