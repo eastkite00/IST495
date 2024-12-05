@@ -32,23 +32,9 @@ Follow these steps to use the project (refer to Financial_News_Sentiment_Analysi
 ## Example
 finviz.csv and news_2024-07-27_to_2024-07-28.numbers are example output files used in Financial_News_Sentiment_Analysis.md for model evaluation
 
-
-## Contributing
-
-We welcome contributions to enhance this project! Here’s how you can contribute:
-
-1. Fork the repository
-2. Create a new branch
-3. Make your changes
-4. Commit your changes
-5. Push to the branch 
-6. Open a pull request
-
-Please ensure your code adheres to our coding standards and include tests where applicable.
-
 ## Contact Information
 
-For any questions or suggestions, please contact the project maintainers:
+For any questions or suggestions, please contact the project maintainer:
 
 - [Dongyeon Kang](mailto:danny379k@gmail.com)
 
